@@ -1,0 +1,55 @@
+﻿<Window x:Class="Tabelle"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kurbelschwinge"
+        mc:Ignorable="d"
+        Title="Tabelle" Height="460" Width="250" ResizeMode="NoResize"
+        ShowInTaskbar="False">
+   <StackPanel >
+      <GroupBox Header="Kurbel"  Height="150" Width="200" HorizontalAlignment="Center" FontSize="12">
+         <UniformGrid Rows="5" Columns="2" >
+            <Label x:Name="LabelKurbelDrehwinkel" Content="Dreh_winkel" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <TextBox x:Name="TextBoxKurbelDrehwinkel" Text="KurbelWinkel" HorizontalAlignment="Left" VerticalAlignment="Center" Width="85"/>
+            <Label x:Name="LabelKurbelDrehrichtung" Content="Dreh_richtung" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <CheckBox x:Name="CheckBoxKurbelDrehrichtung"  HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="True" Width="85"/>
+            <Label x:Name="LabelKurbelX0" Content="Drehpunkt _X" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <TextBox x:Name="TextBoxKurbelX0" Text="KurbelP0.X" HorizontalAlignment="Left" VerticalAlignment="Center" Width="85"/>
+            <Label x:Name="LabelKurbelY0" Content="Drehpunkt _Y" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <TextBox x:Name="TextBoxKurbelY0" Text="KurbelP0.Y" HorizontalAlignment="Left" VerticalAlignment="Center" Width="85"/>
+            <Label x:Name="LabelKurbelLänge" Content="_KurbelLänge" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <TextBox x:Name="TextBoxKurbelLänge" Text="Kurbellänge" HorizontalAlignment="Left" VerticalAlignment="Center" Width="85"/>
+         </UniformGrid>
+      </GroupBox>
+      <GroupBox Header="Schwinge"  Width="200" Height="100"  HorizontalAlignment="Center" FontSize="12">
+         <UniformGrid Rows="3" Columns="2" >
+            <Label x:Name="LabelSchwingeX0" Content="Drehpunkt _X" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <TextBox x:Name="TextBoxSchwingeX0" Text="SchwingeP0.X" HorizontalAlignment="Left" VerticalAlignment="Center" Width="85"/>
+            <Label x:Name="LabelSchwingeY0" Content="Drehpunkt _Y" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <TextBox x:Name="TextBoxSchwingeY0" Text="SchwingeP0.Y" HorizontalAlignment="Left" VerticalAlignment="Center" Width="85"/>
+            <Label x:Name="LabelSchwingeLänge" Content="_SchwingeLänge" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <TextBox x:Name="TextBoxSchwingeLänge" Text="SchwingeLänge" HorizontalAlignment="Left" VerticalAlignment="Center" Width="85"/>
+         </UniformGrid>
+      </GroupBox>
+      <GroupBox Header="Koppel"   Width="200" Height="130" HorizontalAlignment="Center" FontSize="12">
+         <UniformGrid Rows="4" Columns="2" >
+            <Label x:Name="LabelKoppelL1" Content="KoppelL_1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <TextBox x:Name="TextBoxKoppelL1" Text="KoppelL1" HorizontalAlignment="Left" VerticalAlignment="Center" Width="85"/>
+            <Label x:Name="LabelKoppelL2" Content="KoppelL_2" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <TextBox x:Name="TextBoxKoppelL2" Text="KoppelL2" HorizontalAlignment="Left" VerticalAlignment="Center" Width="85"/>
+            <Label x:Name="LabelKoppelMontage" Content="_Montage" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <CheckBox x:Name="CheckBoxKoppelMontage"  HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="True"/>
+            <Label x:Name="LabelKoppelLänge" Content="Koppel_Länge" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <TextBox x:Name="TextBoxKoppelLänge" Text="Koppellänge" HorizontalAlignment="Left" VerticalAlignment="Center" Width="85"/>
+         </UniformGrid>
+
+      </GroupBox>
+
+      <UniformGrid Columns="3" Width="200" Height="20"  Margin="0,10" >
+         <Button x:Name="ButtonTabelleOK"  Content="_OK"  Margin="0,0,6,0" FontSize="11"  IsDefault="True"/>
+         <Button x:Name="ButtonTabelleRunden"  Content="_Runden"  Margin="6,0" FontSize="11" />
+         <Button x:Name="ButtonTabelleAbbrechen" Content="_Abbrechen"  Margin="6,0,0,0" FontSize="11" IsCancel="True"/>
+      </UniformGrid>
+   </StackPanel>
+</Window>
